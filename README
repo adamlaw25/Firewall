@@ -1,14 +1,7 @@
-1.  I tested my solution based on the examples shown on the description file.
-    Since I finished it in an hour, I didn't have enough time to test further cases which will include a stress test to load a huge file of rules and packets to see the performance.
+1.  I tested my solution based on the examples shown on the description file. Since I finished it in an hour, I didn't have enough time to test further cases which will include a stress test to load a huge file of rules and packets to see the performance.
 
-2.  I used a HashMap to contains all the rules where the key is one of the four combinations of directions and protocols (e.g. "inboundtcp").
-    The value of the HashMap is another HashMap where the key is the port number and the value is a HashSet contains all the valid ip addresses or ranges.
-    The reason why I used an inner HashMap to store all the port and its valid ip address is that port numbers are considerably limited since the max is 65535,
-    and therefore retrieving the ip list can be done in O(N) while the space used is still reasonable.
-    For checking if the ip address is valid, if the pattern to be check is a list then get the min and max ip from it and use ipToLong to convert to a long for comparing,
-    otherwise just convert it to a long and compare. Since converting is efficient as it is just running through the 32 bits, checking will also be efficient.
+2.  I used a HashMap to contains all the rules where the key is one of the four combinations of directions and protocols (e.g. "inboundtcp"). The value of the HashMap is another HashMap where the key is the port number and the value is a HashSet contains all the valid ip addresses or ranges. The reason why I used an inner HashMap to store all the port and its valid ip address is that port numbers are considerably limited since the max is 65535, and therefore retrieving the ip list can be done in O(N) while the space used is still reasonable. For checking if the ip address is valid, if the pattern to be check is a list then get the min and max ip from it and use ipToLong to convert to a long for comparing, otherwise just convert it to a long and compare. Since converting is efficient as it is just running through the 32 bits, checking will also be efficient.
 
-3.  If I have more time, I would first refactor the syntax of my code such as make all nested methods to individual methods.
-    For optimization, if any ip address range is overlapping with others, I will combine them to decrease the ip address patterns that need to be check.
+3.  If I have more time, I would first refactor the syntax of my code such as make all nested methods to individual methods. For optimization, if any ip address range is overlapping with others, I will combine them to decrease the ip address patterns that need to be check.
 
 After talking to my friend Ananth Suresh more about what each of the teams do, My preference for the teams are the Platform team, the Policy team and the Data team, in that order.
