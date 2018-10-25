@@ -1,2 +1,0 @@
-# Firewall
-Illumio Coding Assignment
